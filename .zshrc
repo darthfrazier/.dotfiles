@@ -1,1 +1,0 @@
-/Users/Darthfrazier/.zprezto/runcoms/zshrc
