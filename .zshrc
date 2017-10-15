@@ -1,1 +1,1 @@
-/Users/karlfrazier/.zprezto/runcoms/zshrc
+/Users/Darthfrazier/.zprezto/runcoms/zshrc
