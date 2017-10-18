@@ -1,0 +1,46 @@
+# Default OSX folders
+Applications
+Desktop
+Documents
+Downloads
+Google Drive
+Library
+Movies
+Music
+Pictures
+Public
+
+# OSX Dotfiles I don't want to sync
+.Trash
+.bash_sessions
+.config
+.DS_Store
+.bash_history
+.bash_profile
+.ssh
+
+# Application dotfiles I don't want to sync
+.atom
+.dropbox
+.vscode
+.vim
+.viminfo
+.zcompdump*
+.zhistory
+
+# Nerdwallet Macbook configs
+.vagrant.d
+.cups
+
+# WTF are these tho...
+.CFUserTextEncoding
+.gem
+.local
+.myconf
+.oracle_jre_usage
+.pex
+.histfile
+.netrc
+.openvpn-connect.json
+.sh_history
+.skipbuddy

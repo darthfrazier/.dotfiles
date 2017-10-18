@@ -1,0 +1,1 @@
+/Users/karlfrazier/.zprezto/runcoms/zlogout
