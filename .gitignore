@@ -54,3 +54,5 @@ Public
 /.zshenv
 /go/src/github.com/rogpeppe/godef/
 /go/bin/eg
+.nssh
+go
