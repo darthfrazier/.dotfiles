@@ -44,3 +44,5 @@ Public
 .openvpn-connect.json
 .sh_history
 .skipbuddy
+/.psql_history
+/.aws/credentials
