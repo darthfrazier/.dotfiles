@@ -1,0 +1,12 @@
+### NERDWALLET ###
+# identity stuff
+alias dev='cd /srv/nerdwallet'
+alias identity='cd /srv/nerdwallet/identity.nerdwallet'
+alias venv='cd /srv/nerdwallet/identity.nerdwallet; . build/venv/identity_macosx-*/bin/activate; cd -;'
+
+# migrations
+alias rd='cd /srv/nerdwallet/identity.nerdwallet; make drop_db_schema_force; make migrate; cd -'
+alias dd='cd /srv/nerdwallet/identity.nerdwallet; make drop_db_schema_force; cd -'
+
+# git stuff
+alias rebmaster='git checkout master; git pull; git checkout -; git rebase master':

@@ -1,0 +1,39 @@
+### NERDWALLET ###
+### functions ###
+#  DB tunnel setup
+db_tunnel() {
+    trap tunnel_clear INT
+
+    if [[ "$1" = "prod" && "$2" = "primary" ]]; then
+        url="east1-prod-identity-db-0.cglpibc0wlkr.us-east-1.rds.amazonaws.com"
+    elif [[ "$1" = "prod" && "$2" = "replica" ]]; then
+        url="east1-prod-identity-db-read-replica-0.cglpibc0wlkr.us-east-1.rds.amazonaws.com"
+    elif [[ "$1" = "stage" && "$2" = "primary" ]]; then
+        url="east1-stage-identity-db-0.ctmvovxytych.us-east-1.rds.amazonaws.com"
+    elif [[ "$1" = "stage" && "$2" = "replica" ]]; then
+        url="east1-stage-identity-db-replica-2.ctmvovxytych.us-east-1.rds.amazonaws.com"
+    else
+        echo "Usage: tunnel <stage|prod> <primary|replica>"
+        return 1
+    fi
+
+    printf "Setting up tunnel to database: $url on port 22222\n";
+
+    # start ssh in background with sleep command. Will wait 10 seconds for tunnel connection to open or connection will close
+    nssh -c $1 identity-celery -x "-f -o ExitOnForwardFailure=yes -L 22222:$url:5432" -E sleep 10
+    tunnel_connect
+
+    # kill nssh processes
+    tunnel_clear
+}
+
+tunnel_clear() {
+    if pgrep -f nssh; then
+        printf "Killing $(pgrep -f nssh | wc -l) nssh processes\n"
+        pkill -f nssh
+    fi
+}
+
+tunnel_connect() {
+    psql -h 127.0.0.1 -p 22222 -U root -W nwallet_identity
+}

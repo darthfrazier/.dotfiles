@@ -46,3 +46,11 @@ Public
 .skipbuddy
 /.psql_history
 /.aws/credentials
+/.zlogin
+/.zshrc
+/.zlogout
+/.zpreztorc
+/.zprofile
+/.zshenv
+/go/src/github.com/rogpeppe/godef/
+/go/bin/eg
