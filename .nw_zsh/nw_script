@@ -1,5 +1,17 @@
 ### NERDWALLET ###
 ### functions ###
+# Boot up local shit
+init_db() {
+    make dev-postgres-install
+    make dev-redis-install
+
+    make dev-postgres-init
+
+    make dev-postgres-start
+    make dev-redis-start
+}
+
+
 #  DB tunnel setup
 db_tunnel() {
     trap tunnel_clear INT
