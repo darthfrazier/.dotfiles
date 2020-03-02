@@ -27,6 +27,10 @@ Public
 .viminfo
 .zcompdump*
 .zhistory
+.emacs.d 
+.iterm2_profile/com.googlecode.iterm2.plist
+.spacemacs
+.zprezto
 
 # Nerdwallet Macbook configs
 .vagrant.d
