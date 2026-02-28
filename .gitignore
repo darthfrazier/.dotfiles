@@ -27,16 +27,15 @@ Public
 .viminfo
 .zcompdump*
 .zhistory
-.emacs.d 
-.iterm2_profile/com.googlecode.iterm2.plist
-.spacemacs
-.zprezto
 
-# Nerdwallet Macbook configs
+# Sensitive / credentials
+.netrc
+.aws/credentials
+.openvpn-connect.json
+
+# Misc / system
 .vagrant.d
 .cups
-
-# WTF are these tho...
 .CFUserTextEncoding
 .gem
 .local
@@ -44,9 +43,6 @@ Public
 .oracle_jre_usage
 .pex
 .histfile
-.netrc
-.openvpn-connect.json
 .sh_history
 .skipbuddy
-/.psql_history
-/.aws/credentials
+.psql_history
